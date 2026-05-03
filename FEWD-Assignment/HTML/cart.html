@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Bean Boutique</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1 class="logo">Bean Boutique</h1>
+            <button class="hamburger" type="button" aria-label="Open main menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul class="pages">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coffee_section.html">Coffee</a></li>
+            <li><a href="equipment_section.html">Equipment</a></li>
+            <li><a href="events_section.html">Events</a></li>
+            <li><a href="offer_section.html">Offers</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping nav-cart"></i></a></li>
+        </ul>
+    </nav>
+
+    <main class="cart-page">
+        <section class="cart-header">
+            <h1>Shopping Cart</h1>
+            <p>Add your favorite coffee blends and equipment for purchase later.</p>
+        </section>
+
+        <section class="cart-content">
+            <div class="cart-products">
+                <div class="product-box">
+                    
+                    <div class="table-wrap">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Photo</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="drinks-body">
+                                <tr data-category="drinks" data-id="golden-latte">
+                                    <td><img src="../Images/golden latte.jpg" alt="Golden Bloom Latte" class="product-image"></td>
+                                    <td>Golden Bloom Latte</td>
+                                    <td class="price-cell">$18.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="golden-latte">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="golden-latte">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="midnight-cold-brew">
+                                    <td><img src="../Images/midnight.jpg" alt="Midnight Citrus Cold Brew" class="product-image"></td>
+                                    <td>Midnight Citrus Cold Brew</td>
+                                    <td class="price-cell">$16.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="midnight-cold-brew">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="midnight-cold-brew">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="latte">
+                                    <td><img src="../Images/latte.jpg" alt="Latte" class="product-image"></td>
+                                    <td>Latte</td>
+                                    <td class="price-cell">$19.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="latte">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="latte">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="cappuccino">
+                                    <td><img src="../Images/Cappucino.jpg" alt="Cappuccino" class="product-image"></td>
+                                    <td>Cappuccino</td>
+                                    <td class="price-cell">$17.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="cappuccino">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="cappuccino">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="americano">
+                                    <td><img src="../Images/Americano.jpg" alt="Americano" class="product-image"></td>
+                                    <td>Americano</td>
+                                    <td class="price-cell">$21.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="americano">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="americano">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="flat-white">
+                                    <td><img src="../Images/Flat White.jpg" alt="Flat White" class="product-image"></td>
+                                    <td>Flat White</td>
+                                    <td class="price-cell">$14.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="flat-white">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="flat-white">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="mocha">
+                                    <td><img src="../Images/Mocha.jpg" alt="Mocha" class="product-image"></td>
+                                    <td>Mocha</td>
+                                    <td class="price-cell">$20.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="mocha">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="mocha">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="espresso">
+                                    <td><img src="../Images/Café espresso.jpG" alt="Espresso" class="product-image"></td>
+                                    <td>Espresso</td>
+                                    <td class="price-cell">$18.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="espresso">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="espresso">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="irish-coffee">
+                                    <td><img src="../Images/The Irish Coffee.jpg" alt="Irish Coffee" class="product-image"></td>
+                                    <td>Irish Coffee</td>
+                                    <td class="price-cell">$35.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="irish-coffee">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="irish-coffee">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="caramel-cookie">
+                                    <td><img src="../Images/cookie.jpg" alt="Caramelized Oat Cookie" class="product-image"></td>
+                                    <td>Caramelized Oat Cookie</td>
+                                    <td class="price-cell">$22.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="caramel-cookie">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="caramel-cookie">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="lemon-muffin">
+                                    <td><img src="../Images/Lemon Poppy Seed Muffins.jpg" alt="Lemon Poppy Muffin" class="product-image"></td>
+                                    <td>Lemon Poppy Muffin</td>
+                                    <td class="price-cell">$15.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="lemon-muffin">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="lemon-muffin">Remove</button></td>
+                                </tr>
+                                <tr data-category="drinks" data-id="dark-chocolate-tart">
+                                    <td><img src="../Images/Dark Chocolate Tart.jpg" alt="Dark Chocolate Tart" class="product-image"></td>
+                                    <td>Dark Chocolate Tart</td>
+                                    <td class="price-cell">$12.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="drinks" data-id="dark-chocolate-tart">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="drinks" data-id="dark-chocolate-tart">Remove</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    
+                    <div class="table-wrap">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Photo</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="machines-body">
+                                <tr data-category="machines" data-id="pro-espresso-machine">
+                                    <td><img src="../Images/expresso_machine.jpg" alt="Pro Espresso Machine" class="product-image"></td>
+                                    <td>Pro Espresso Machine</td>
+                                    <td class="price-cell">$1299.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="pro-espresso-machine">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="pro-espresso-machine">Remove</button></td>
+                                </tr>
+                                <tr data-category="machines" data-id="pour-over-kit">
+                                    <td><img src="../Images/pour.jpg" alt="Pour Over Kit" class="product-image"></td>
+                                    <td>Pour Over Kit</td>
+                                    <td class="price-cell">$89.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="pour-over-kit">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="pour-over-kit">Remove</button></td>
+                                </tr>
+                                <tr data-category="machines" data-id="french-press">
+                                    <td><img src="../Images/French press.jpg" alt="French Press" class="product-image"></td>
+                                    <td>French Press</td>
+                                    <td class="price-cell">$45.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="french-press">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="french-press">Remove</button></td>
+                                </tr>
+                                <tr data-category="machines" data-id="grinder-pro">
+                                    <td><img src="../Images/Grinder.jpg" alt="Grinder Pro" class="product-image"></td>
+                                    <td>Grinder Pro</td>
+                                    <td class="price-cell">$249.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="grinder-pro">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="grinder-pro">Remove</button></td>
+                                </tr>
+                                <tr data-category="machines" data-id="aeropress-duo">
+                                    <td><img src="../Images/Aerao press.jpg" alt="AeroPress Duo" class="product-image"></td>
+                                    <td>AeroPress Duo</td>
+                                    <td class="price-cell">$39.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="aeropress-duo">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="aeropress-duo">Remove</button></td>
+                                </tr>
+                                <tr data-category="machines" data-id="cold-brew-maker">
+                                    <td><img src="../Images/cold brew.jpg" alt="Cold Brew Maker" class="product-image"></td>
+                                    <td>Cold Brew Maker</td>
+                                    <td class="price-cell">$59.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="cold-brew-maker">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="cold-brew-maker">Remove</button></td>
+                                </tr>
+                                <tr data-category="machines" data-id="gooseneck-kettle">
+                                    <td><img src="../Images/gooseneck Kettle.jpg" alt="Gooseneck Kettle" class="product-image"></td>
+                                    <td>Gooseneck Kettle</td>
+                                    <td class="price-cell">$79.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="gooseneck-kettle">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="gooseneck-kettle">Remove</button></td>
+                                </tr>
+                                <tr data-category="machines" data-id="coffee-scale">
+                                    <td><img src="../Images/coffe scale.jpg" alt="Digital Coffee Scale" class="product-image"></td>
+                                    <td>Digital Coffee Scale</td>
+                                    <td class="price-cell">$34.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="coffee-scale">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="coffee-scale">Remove</button></td>
+                                </tr>
+                                <tr data-category="machines" data-id="drip-coffee-maker">
+                                    <td><img src="../Images/drip coffee maker.jpg" alt="Premium Drip Coffee Maker" class="product-image"></td>
+                                    <td>Premium Drip Coffee Maker</td>
+                                    <td class="price-cell">$149.99</td>
+                                    <td>
+                                        <div class="quantity-control">
+                                            <button type="button" class="quantity-btn" data-action="minus">-</button>
+                                            <input type="number" min="0" value="0" class="quantity-input" data-category="machines" data-id="drip-coffee-maker">
+                                            <button type="button" class="quantity-btn" data-action="plus">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="row-total">$0.00</td>
+                                    <td><button type="button" class="remove-btn" data-category="machines" data-id="drip-coffee-maker">Remove</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-card">
+                    <h2></h2>
+                    <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+                    <div class="summary-row"><span>Tax (8%)</span><span id="tax">$0.00</span></div>
+                    <div class="summary-row total"><span>Total</span><span id="total">$0.00</span></div>
+                    <button id="checkout-btn" class="checkout-button">Purchase Now</button>
+                    <button id="clear-cart-btn" class="clear-cart-button">Clear Cart</button>
+                    <p class="cart-note">Your selected quantities are saved locally in the browser.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var STORAGE_KEY = 'beanBoutiqueCart';
+
+function formatMoney(value) {
+    return '$' + value.toFixed(2);
+}
+
+function parsePrice(text) {
+    return parseFloat(text.replace(/[^0-9.]/g, '')) || 0;
+}
+
+function getCartState() {
+    var saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) {
+        return {};
+    }
+    try {
+        return JSON.parse(saved);
+    } catch (error) {
+        return {};
+    }
+}
+
+function saveCartState(state) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function updateRowTotal(row) {
+    var input = row.querySelector('.quantity-input');
+    var priceCell = row.querySelector('.price-cell');
+    var totalCell = row.querySelector('.row-total');
+    var quantity = Math.max(0, parseInt(input.value, 10) || 0);
+    var price = parsePrice(priceCell.textContent);
+    totalCell.textContent = formatMoney(price * quantity);
+    return quantity;
+}
+
+function updateSummary() {
+    var subtotal = 0;
+    var rows = document.querySelectorAll('.cart-table tbody tr');
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var quantity = updateRowTotal(row);
+        var price = parsePrice(row.querySelector('.price-cell').textContent);
+        subtotal += price * quantity;
+    }
+    var tax = subtotal * 0.08;
+    document.getElementById('subtotal').textContent = formatMoney(subtotal);
+    document.getElementById('tax').textContent = formatMoney(tax);
+    document.getElementById('total').textContent = formatMoney(subtotal + tax);
+}
+
+function saveQuantities() {
+    var state = {};
+    var inputs = document.querySelectorAll('.quantity-input');
+    for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];
+        var id = input.dataset.id;
+        var quantity = Math.max(0, parseInt(input.value, 10) || 0);
+        if (quantity > 0) {
+            state[id] = quantity;
+        }
+    }
+    saveCartState(state);
+}
+
+function applySavedQuantities() {
+    var state = getCartState();
+    var inputs = document.querySelectorAll('.quantity-input');
+    for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];
+        var savedQuantity = state[input.dataset.id];
+        if (savedQuantity !== undefined) {
+            input.value = savedQuantity;
+        }
+    }
+}
+
+function findRow(productId) {
+    return document.querySelector('.cart-table tbody tr[data-id="' + productId + '"]');
+}
+
+function changeQuantity(productId, delta) {
+    var row = findRow(productId);
+    if (!row) {
+        return;
+    }
+    var input = row.querySelector('.quantity-input');
+    var current = Math.max(0, parseInt(input.value, 10) || 0);
+    var next = current + delta;
+    input.value = next >= 0 ? next : 0;
+    updateRowTotal(row);
+    saveQuantities();
+    updateSummary();
+}
+
+function removeProduct(productId) {
+    var row = findRow(productId);
+    if (!row) {
+        return;
+    }
+    var input = row.querySelector('.quantity-input');
+    input.value = 0;
+    updateRowTotal(row);
+    saveQuantities();
+    updateSummary();
+}
+
+function handleQuantityInput(input) {
+    input.value = Math.max(0, parseInt(input.value, 10) || 0);
+    updateRowTotal(input.closest('tr'));
+    saveQuantities();
+    updateSummary();
+}
+
+function handleCheckout() {
+    var state = getCartState();
+    var quantitySum = 0;
+    for (var key in state) {
+        if (state.hasOwnProperty(key)) {
+            quantitySum += state[key];
+        }
+    }
+    if (quantitySum === 0) {
+        alert('Your cart is empty. Add your favorite products first.');
+        return;
+    }
+    var totalText = document.getElementById('total').textContent;
+    alert('Checkout ready! Total: ' + totalText + '. Online payments will be enabled soon.');
+}
+
+function handleClearCart() {
+    var inputs = document.querySelectorAll('.quantity-input');
+    for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];
+        input.value = 0;
+        updateRowTotal(input.closest('tr'));
+    }
+    saveCartState({});
+    updateSummary();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    applySavedQuantities();
+    updateSummary();
+
+    document.addEventListener('click', function(event) {
+        var plusMinusBtn = event.target.closest('.quantity-btn');
+        if (plusMinusBtn) {
+            var row = plusMinusBtn.closest('tr');
+            var productId = row.dataset.id;
+            var delta = plusMinusBtn.dataset.action === 'plus' ? 1 : -1;
+            changeQuantity(productId, delta);
+            return;
+        }
+
+        var removeBtn = event.target.closest('.remove-btn');
+        if (removeBtn) {
+            var productId = removeBtn.closest('tr').dataset.id;
+            removeProduct(productId);
+            return;
+        }
+
+        if (event.target.id === 'checkout-btn') {
+            handleCheckout();
+            return;
+        }
+
+        if (event.target.id === 'clear-cart-btn') {
+            handleClearCart();
+            return;
+        }
+    });
+
+    document.addEventListener('change', function(event) {
+        if (event.target.classList.contains('quantity-input')) {
+            handleQuantityInput(event.target);
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
