@@ -24,7 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     
@@ -239,6 +239,7 @@
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Your email address" aria-label="Email address">
                     </div>
+                    <div class="g-recaptcha" data-sitekey="6LcDpdgsAAAAADU_vUmw7IyOPP8SFwWCys1vhXt9"></div>
                     <button type="button" class="popup-button1">Log in</button>
                     <button type="button" class="popup-button2" id="close2">No Thanks</button>
                 </div>
@@ -295,32 +296,34 @@
         </div>
     </footer>
 
-
     <script>
 window.onload = function () {
 
-  setTimeout(() => {
-    document.getElementById("pop-up-container").style.display = "flex";
-    document.body.classList.add("no-scroll"); 
-  }, 3000);
+  if (!localStorage.getItem("popupShown")) {
 
-  document.getElementById("close").onclick = function () {
-    document.getElementById("pop-up-container").style.display = "none";
-    document.body.classList.remove("no-scroll");
-  };
-  
-  document.getElementById("close2").onclick = function () {
-    document.getElementById("pop-up-container").style.display = "none";
-    document.body.classList.remove("no-scroll");
-  };
+    setTimeout(() => {
+      document.getElementById("pop-up-container").style.display = "flex";
+      document.body.classList.add("no-scroll");
+    }, 3000);
 
-  document.getElementById("pop-up-overlay").onclick = function () {
+  }
+
+  function closePopup() {
     document.getElementById("pop-up-container").style.display = "none";
     document.body.classList.remove("no-scroll");
-  };
+
+    localStorage.setItem("popupShown", "true");
+  }
+
+  document.getElementById("close").onclick = closePopup;
+  document.getElementById("close2").onclick = closePopup;
+  document.getElementById("pop-up-overlay").onclick = closePopup;
 
 };
 </script>
+
+
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
