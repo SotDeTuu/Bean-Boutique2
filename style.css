@@ -1040,7 +1040,7 @@ section h2 {
     width: 100%;
     min-height: 900px;
     height: clamp(450px, 55vh, 900px);
-    background-image: url(../Images/coffee_offers.jpg);
+    background-image: url(coffee_offers.jpg);
 
     background-position: center;
     background-repeat: no-repeat;
