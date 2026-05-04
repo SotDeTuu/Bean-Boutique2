@@ -655,7 +655,7 @@ section h2 {
     width: 100%;
     min-height: 900px;
     height: clamp(450px, 55vh, 900px);
-    background-image: url(../Images/coffee_page.jpg);
+    background-image: url(coffee_page.jpg);
 
     background-position: center;
     background-repeat: no-repeat;
@@ -694,7 +694,7 @@ section h2 {
     width: 100%;
     min-height: 900px;
     height: clamp(450px, 55vh, 900px);
-    background-image: url(../Images/brewing_machine2.jpg);
+    background-image: url(brewing_machine2.jpg);
 
     background-position: center;
     background-repeat: no-repeat;
@@ -731,7 +731,7 @@ section h2 {
     width: 100%;
     min-height: 900px;
     height: clamp(450px, 55vh, 900px);
-    background-image: url(../Images/cofee_event.jpg);
+    background-image: url(cofee_event.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
