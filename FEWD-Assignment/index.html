@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1 class="logo">Bean Boutique</h1>
+            <button class="hamburger" type="button" aria-label="Open main menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul class="pages">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coffee_section.html">Coffee</a></li>
+            <li><a href="equipment_section.html">Equipment</a></li>
+            <li><a href="events_section.html">Events</a></li>
+            <li><a href="offer_section.html">Offers</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping nav-cart"></i></a></li>
+        </ul>
+        
+    </nav>
+    
+    <div class="slideshow_container">
+        <div class="slideshow_box">
+            <img src="../Images/coffee_and_beans.jpg" alt="" class="beans">
+            <img src="../Images/blewing_machine1.jpg" alt="">
+             <img src="../Images/peoples_cafe.jpg" alt="">    
+        </div>
+
+        <div class="slideshow_box_text">
+            <p class="coffee_roaster">COFFEE ROASTER</p>  
+            <p class="hero">A Coffee of <br>Excellence Inspires <br> Great Ideas</p>
+            <p class="dcs">Our coffee is the joint effort of three generations dedicated to growing coffee,<br> as well as managing all the associated processes including cupping, roasting <br> and "barismo" in order to please the palette of our customers.</p><br>
+            <button><span>Order Now</span></button>
+           
+        </div>
+    </div>
+
+    <div class="about-us">
+        <img src="../Images/coffee_cup.jpg" alt="" class="image_coffee_cup">
+        <div class="about_coffee_shop">
+            
+            <p class="about">About</p>
+            <p class="Eiom">Excellence is Our Mission</p>
+            <p class="dcs">The coffee produced on our plantation is exported to Japan, Norway, Australia and the United States of America. We offer exceptional quality at all of our beans boutiques.</p>
+            <p class="dcs">Bean Boutique offers a variety of savory and sweet high-quality products, based on recipes inspired by both Italian and Honduran cuisine. The eclectic and original design of our coffee boutiques creates a comfortable, unique and welcoming environment, which we know you will enjoy.</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>Explore Our Boutique</h2>
+        <div class="section-grid">
+            <div class="section_box">
+            <img src="../Images/coffee_page.jpg" alt="">
+            <div>
+                <h3>Premium Roasts</h3>
+                <p>From earthy dark roasts to bright citrus blends, discover our hand-picked selection of ethically sourced beans.</p>
+                <a href="coffee_section.html">
+                    Shop Coffee
+                </a>
+            </div>
+
+        </div>
+        <div class="section_box">
+            <img src="../Images/brewing_machine2.jpg" alt="">
+            <div>
+                <h3>Professional Gear</h3>
+                <p>Elevate your home brewing experience with our range of high-quality grinders, espresso machines, and pour-over kits.</p>
+                <a href="equipment_section.html">View Equipment</a>
+            </div>
+
+        </div>
+        <div class="section_box">
+            <img src="../Images/cofee_event.jpg" alt="">
+            <div>
+                <h3>Roastery Events</h3>
+                <p>Join us for monthly latte art workshops, coffee tasting sessions, and live music nights at the boutique.</p>
+                <a href="events_section.html">See Calendar</a>
+            </div>
+
+        </div>
+        <div class="section_box">
+            <img src="../Images/coffee_offers.jpg" alt="">
+            <div>
+                <h3>Member Exclusive</h3>
+                <p>Save up to 20% on bulk orders or join our subscription club to get fresh beans delivered to your door every month.</p>
+                <a href="offer_section.html">See Calendar</a>
+            </div>
+
+        </div>
+        </div>
+    
+        </section>
+
+        <!-- Customer Reviews -->
+    <section class="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="reviews-container">
+            <div class="review-box">
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"The best coffee I've ever had! Golden Bloom Latte is absolutely amazing. The staff is so knowledgeable and friendly. I highly recommend Bean Boutique to any coffee lover!"</p>
+                <p class="review-author">- Sarah M.</p>
+            </div>
+
+            <div class="review-box">
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="review-text">"Great selection of beans and excellent customer service. I ordered the subscription box and look forward to my deliveries every month. The freshness is unmatched!"</p>
+                <p class="review-author">- James K.</p>
+            </div>
+
+            <div class="review-box">
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="review-text">"I've tried many coffee shops, but this one stands out. The beans are fresh, and every cup feels crafted with care. Totally worth it!"</p>
+                <p class="review-author">- Xattora</p>
+            </div>
+        </div>
+    </section>
+
+        
+    
+
+    <div class="map">
+        <h2>Where are we?</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239.26875108545445!2d96.13971529532806!3d16.80437054742024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1edf09dd100c5%3A0x289d67e1dac6b9aa!2sTwinkle%20University!5e0!3m2!1sen!2smm!4v1777469254447!5m2!1sen!2smm"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    
+
+    <div class="about-coffee">
+        <h2>What Is Coffee?</h2>
+        <div class="coffee-grid">
+            <div class="coffee-box">
+                <div class="coffee-card-content">
+                    <h3>History Of Coffee</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EJVbsCfLy-8?si=Drez--BMpj3zDhP3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+            </div>
+            <div class="coffee-box">
+                <div class="coffee-card-content">
+                    <h3>Types Of Coffee</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dVWWHCsF0ZY?si=A5x3iJ5PGP2ACWxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+            </div>
+            <div class="coffee-box">
+                <div class="coffee-card-content">
+                    <h3>How To Make Coffee
+                    </h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/idwxgYohK90?si=enDIg8F_LQVpaCOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+            </div>
+
+            <div class="coffee-box">
+                <div class="coffee-card-content">
+                    <h3>Coffee Brewing Methods</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vQVTNscQY0c?si=mjv3S_xMj4eWS8J0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="coffee-box">
+                <div class="coffee-card-content">
+                    <h3>Why We Drink Coffee?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XoxwcE6g7Qw?si=uevUvAP7tLGmKOhu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+            </div>
+            <div class="coffee-box">
+                <div class="coffee-card-content">
+                    <h3>Choosing The Right Coffee</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/O9YnLFrM7Fs?si=vWGcZCYJrhxoKcul" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                   
+            </div>
+        </div> 
+    
+    
+            
+            
+        </div>
+    </div>
+
+    <div id="pop-up-container" class="pop-up-container">
+        <div id="pop-up-overlay" class="pop-up-overlay"></div>
+        <div class="pop-up-box">
+            <button id="close" class="close-popup" aria-label="Close popup">&times;</button>
+            <div class="popup-content">
+                <span class="popup-badge">First-Time Visitor</span>
+                <h2>Save <span class="highlight">20%</span> on your first order</h2>
+                <p class="popup-subtitle">Sign up with your email to claim this welcome discount</p>
+                <p class="popup-desc">Enter your email below and enjoy 20% off your first purchase at Bean Boutique.</p>
+                <div class="signup-form">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Your email address" aria-label="Email address">
+                    </div>
+                    <button type="button" class="popup-button1">Log in</button>
+                    <button type="button" class="popup-button2" id="close2">No Thanks</button>
+                </div>
+                <p class="popup-note">Limited offer for new customers. We respect your privacy.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-logo">Bean Boutique</h2>
+                <p class="footer-tagline">A Coffee of Excellence</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee_section.html">Our Coffee</a></li>
+                    <li><a href="equipment_section.html">Equipment</a></li>
+                    <li><a href="events_section.html">Events</a></li>
+                    <li><a href="offer_section.html">Offers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> No.29 Dhammayone St, Yangon</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <p><i class="fa-solid fa-business-time"></i> MON-SUN: 8AM-8PM</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe for exclusive offers and coffee updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+window.onload = function () {
+
+  setTimeout(() => {
+    document.getElementById("pop-up-container").style.display = "flex";
+    document.body.classList.add("no-scroll"); 
+  }, 3000);
+
+  document.getElementById("close").onclick = function () {
+    document.getElementById("pop-up-container").style.display = "none";
+    document.body.classList.remove("no-scroll");
+  };
+  
+  document.getElementById("close2").onclick = function () {
+    document.getElementById("pop-up-container").style.display = "none";
+    document.body.classList.remove("no-scroll");
+  };
+
+  document.getElementById("pop-up-overlay").onclick = function () {
+    document.getElementById("pop-up-container").style.display = "none";
+    document.body.classList.remove("no-scroll");
+  };
+
+};
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const pages = document.querySelector('.pages');
+            hamburger?.addEventListener('click', function() {
+                pages?.classList.toggle('open');
+            });
+        });
+    </script>
+      
+
+    
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/05/03/08/20260503081203-EHE3DEUV.js" defer></script>
+    
+    
+    
+</body>
+
+</html>
