@@ -299,7 +299,7 @@
     <script>
 window.onload = function () {
 
-  if (!localStorage.getItem("popupShown")) {
+  if (!sessionStorage.getItem("popupShown")) {
 
     setTimeout(() => {
       document.getElementById("pop-up-container").style.display = "flex";
