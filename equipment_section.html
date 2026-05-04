@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1 class="logo">Bean Boutique</h1>
+            <button class="hamburger" type="button" aria-label="Open main menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul class="pages">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coffee_section.html">Coffee</a></li>
+            <li><a href="equipment_section.html">Equipment</a></li>
+            <li><a href="events_section.html">Events</a></li>
+            <li><a href="offer_section.html">Offers</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping nav-cart"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header-photo2">
+        <div class="title">
+            <h2>Professional Home Brewing</h2><br>
+            <p>Bring the café experience home. Whether you need the precision of an espresso machine or the craft of a pour-over kit, our professional-grade tools are chosen to help you brew with confidence and ease.</p>
+        </div>
+    </div>
+
+    <!-- Equipment Catalog -->
+    <div class="catalog-container">
+        <h2 class="catalog-title">Brewing Equipment</h2>
+        <div class="catalog-grid">
+            <!-- Equipment 1 -->
+            <div class="catalog-box">
+                <img src="../Images/expresso_machine.jpg" alt="Pro Espresso Machine">
+                <div class="catalog-content">
+                    <h3>Pro Espresso Machine</h3>
+                    <p>Professional-grade espresso machine with dual boiler system and PID temperature control.</p>
+                    <p class="tips"><strong>Tips:</strong> Use filtered water and descale monthly. Grind beans fresh, just before brewing for best crema.</p>
+                    <span class="price">$1,299.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Equipment 2 -->
+            <div class="catalog-box">
+                <img src="../Images/pour.jpg" alt="Pour Over Kit">
+                <div class="catalog-content">
+                    <h3>Pour Over Kit</h3>
+                    <p>Complete pour-over brewing set including dripper, gooseneck kettle, and filters.</p>
+                    <p class="tips"><strong>Tips:</strong> Use a 1:16 coffee-to-water ratio. Pour in slow, circular motions for even extraction.</p>
+                    <span class="price">$89.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Equipment 3 -->
+            <div class="catalog-box">
+                <img src="../Images/French press.jpg" alt="French Press">
+                <div class="catalog-content">
+                    <h3>French Press</h3>
+                    <p>Classic French press with borosilicate glass and stainless steel plunger.</p>
+                    <p class="tips"><strong>Tips:</strong> Steep for 4 minutes. Use coarse grind to prevent sediment. Press slowly and evenly.</p>
+                    <span class="price">$45.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Equipment 4 -->
+            <div class="catalog-box">
+                <img src="../Images/Grinder.jpg" alt="Grinder Pro">
+                <div class="catalog-content">
+                    <h3>Grinder Pro</h3>
+                    <p>Burr grinder with 40 grind settings for any brewing method. Quiet operation.</p>
+                    <p class="tips"><strong>Tips:</strong> Clean the burrs weekly. Replace burrs every 500-1000 cups for consistent grounds.</p>
+                    <span class="price">$249.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Equipment 5 -->
+            <div class="catalog-box">
+                <img src="../Images/Aerao press.jpg" alt="AeroPress Duo">
+                <div class="catalog-content">
+                    <h3>AeroPress Duo</h3>
+                    <p>Versatile brewing device for espresso-style or immersion coffee.</p>
+                    <p class="tips"><strong>Tips:</strong> Use inverted method for immersion. Try both standard and inverted for different flavors.</p>
+                    <span class="price">$39.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Equipment 6 -->
+            <div class="catalog-box">
+                <img src="../Images/cold brew.jpg" alt="Cold Brew Maker">
+                <div class="catalog-content">
+                    <h3>Cold Brew Maker</h3>
+                    <p>5-liter cold brew coffee maker with fine mesh filter. Perfect for summer.</p>
+                    <p class="tips"><strong>Tips:</strong> Steep in refrigerator for 12-24 hours. Use coarse grind. Dilute concentrate 1:1 with water.</p>
+                    <span class="price">$59.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Equipment 7 -->
+            <div class="catalog-box">
+                <img src="../Images/gooseneck Kettle.jpg" alt="Gooseneck Kettle">
+                <div class="catalog-content">
+                    <h3>Gooseneck Kettle</h3>
+                    <p>Temperature-controlled electric kettle with precision pour spout.</p>
+                    <p class="tips"><strong>Tips:</strong> Heat water to 195-205°F for optimal extraction. Control pour speed for consistent results.</p>
+                    <span class="price">$79.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Equipment 8 -->
+            <div class="catalog-box">
+                <img src="../Images/coffe scale.jpg" alt="Coffee Scale">
+                <div class="catalog-content">
+                    <h3>Digital Coffee Scale</h3>
+                    <p>Precision scale with built-in timer. 0.1g accuracy for perfect ratios.</p>
+                    <p class="tips"><strong>Tips:</strong> Use 1:15 to 1:17 ratio for pour over. Tare function helps measure multiple ingredients.</p>
+                    <span class="price">$34.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Equipment 9 -->
+            <div class="catalog-box">
+                <img src="../Images/drip coffee maker.jpg" alt="Drip Coffee Maker">
+                <div class="catalog-content">
+                    <h3>Premium Drip Coffee Maker</h3>
+                    <p>Programmable drip coffee maker with thermal carafe and bloom mode.</p>
+                    <p class="tips"><strong>Tips:</strong> Use medium-fine grind. Clean the carafe regularly with vinegar to remove oils.</p>
+                    <span class="price">$149.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-logo">Bean Boutique</h2>
+                <p class="footer-tagline">A Coffee of Excellence</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee_section.html">Our Coffee</a></li>
+                    <li><a href="equipment_section.html">Equipment</a></li>
+                    <li><a href="events_section.html">Events</a></li>
+                    <li><a href="offer_section.html">Offers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> No.29 Dhammayone St, Yangon</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <p><i class="fa-solid fa-business-time"></i> MON-SUN: 8AM-8PM</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe for exclusive offers and coffee updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const pages = document.querySelector('.pages');
+            hamburger?.addEventListener('click', function() {
+                pages?.classList.toggle('open');
+            });
+        });
+    </script>
+
+    
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/05/03/08/20260503081203-EHE3DEUV.js" defer></script>
+    
+</body>    
