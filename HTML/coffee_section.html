@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Milonga&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Chorasmian&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1 class="logo">Bean Boutique</h1>
+            <button class="hamburger" type="button" aria-label="Open main menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul class="pages">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coffee_section.html">Coffee</a></li>
+            <li><a href="equipment_section.html">Equipment</a></li>
+            <li><a href="events_section.html">Events</a></li>
+            <li><a href="offer_section.html">Offers</a></li>
+           <li><a href="cart.html"><i class="fa-solid fa-cart-shopping nav-cart"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header-photo1">
+        <div class="title">
+            <h2>Masterfully Roasted Beans</h2><br>
+            <p>Elevate your daily ritual with our curated selection of ethically sourced beans. From velvety dark roasts to bright, citrusy light blends, we bring the world’s finest high-altitude flavors directly to your cup.</p>
+        </div>
+    </div>
+    <!-- Coffee Catalog -->
+    <div class="catalog-container">
+        <h2 class="catalog-title">Our Coffee Selection</h2>
+        <div class="catalog-search">
+            <form class="search-form" action="#" method="get" aria-label="Search coffee catalog">
+                <input type="search" class="search-input" name="q" placeholder="Search coffee......" aria-label="Search coffee">
+                <button type="submit" class="search-btn" aria-label="Submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="catalog-grid">
+            <!-- Coffee 1 -->
+            <div class="catalog-box">
+                <img src="../Images/golden latte.jpg" alt="Ethiopian Yirgacheffe">
+                <div class="catalog-content">
+                    <h3>Golden Bloom Latte</h3>
+                    <p>A smooth Espresso latte with honey sweetness notes.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Gentle honey sweetness with light floral aroma, creamy and silky finish. </p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> Pull espresso and combine with honey syrup, then add steamed milk. </p>
+                    <span class="price">$18.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Coffee 2 -->
+            <div class="catalog-box">
+                <img src="../Images/midnight.jpg" alt="Colombian Supremo">
+                <div class="catalog-content">
+                    <h3>Midnight Citrus Cold Brew</h3>
+                    <p>A refreshing Cold brew coffee with a bright citrus twist.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Bold coffee with orange-like acidity, clean and crisp aftertaste. </p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> steep coffee grounds in cold water for 12–18 hours, then serve over ice with citrus. </p>
+                    <span class="price">$16.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Coffee 3 -->
+            <div class="catalog-box">
+                <img src="../Images/latte.jpg" alt="Sumatra Mandheling">
+                <div class="catalog-content">
+                    <h3>Latte</h3>
+                    <p>Espresso with steamed milk and a thin layer of foam.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Smooth and balanced with mild coffee flavor; creamy and slightly sweet finish. </p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> Pull espresso and add steamed milk, finishing with a thin layer of foam. </p>
+                    <span class="price">$19.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Coffee 4 -->
+            <div class="catalog-box">
+                <img src="../Images/Cappucino.jpg" alt="Guatemala Antigua">
+                <div class="catalog-content">
+                    <h3>Cappuccino</h3>
+                    <p>Espresso with equal parts steamed milk and foam.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Bold espresso flavor with light milk sweetness; frothy and airy texture. </p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> Pull espresso, add steamed milk, and top with thick milk foam.</p>
+                    <span class="price">$17.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Coffee 5 -->
+            <div class="catalog-box">
+                <img src="../Images/Americano.jpg" alt="Kenya AA">
+                <div class="catalog-content">
+                    <h3>Americano</h3>
+                    <p>Espresso diluted with hot water.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Clean and strong with mild bitterness; smooth and easy-drinking finish.</p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> Brew espresso and add hot water to reach desired strength.</p>
+                    
+                    <span class="price">$21.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Coffee 6 -->
+            <div class="catalog-box">
+                <img src="../Images/Flat White.jpg" alt="Brazilian Santos">
+                <div class="catalog-content">
+                    <h3>Flat White</h3>
+                    <p>Espresso with velvety, micro-foamed milk.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Rich and silky with strong coffee presence; smooth, velvety texture.</p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> Pull espresso and add finely textured micro-foam milk.</p>
+                    <span class="price">$14.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Coffee 7 -->
+            <div class="catalog-box">
+                <img src="../Images/Mocha.jpg" alt="Costa Rica Tarrazu">
+                <div class="catalog-content">
+                    <h3>Mocha</h3>
+                    <p>Espresso mixed with rich chocolate and milk.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Sweet and chocolatey with coffee depth; creamy and indulgent finish.</p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> Mix espresso with chocolate syrup, then add steamed milk and stir well.</p>
+                    <span class="price">$20.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Coffee 8 -->
+            <div class="catalog-box">
+                <img src="../Images/Café espresso.jpG" alt="Java Estate">
+                <div class="catalog-content">
+                    <h3>Espresso</h3>
+                    <p>A concentrated, rich shot of pure coffee.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Intense and bold with nutty depth; creamy crema and lingering finish.</p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> Brew finely ground coffee under high pressure using an espresso machine.</p>
+                    <span class="price">$18.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- coffee 9 -->
+            <div class="catalog-box">
+                <img src="../Images/The Irish Coffee.jpg" alt="Panama Geisha">
+                <div class="catalog-content">
+                    <h3>Irish Coffee</h3>
+                    <p>Coffee mixed with sugar, cream, and whiskey.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Warm, sweet, and slightly boozy with creamy top layer. </p>
+                    <p class="tasting-notes"><strong>Brewing Method:</strong> Brew hot coffee, mix with sugar and whiskey, then float whipped cream on top.</p>
+                    
+                    
+                    <span class="price">$35.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- food 10 -->
+            <div class="catalog-box">
+                <img src="../Images/cookie.jpg" alt="Tanzania Peaberry">
+                <div class="catalog-content">
+                    <h3>Caramelized Oat Cookie</h3>
+                    <p>A chewy cookie featuring rolled oats and cinnamon.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Sweet caramel flavor with chewy oats and a hint of cinnamon.</p>
+                    
+                    <span class="price">$22.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- food 11 -->
+            <div class="catalog-box">
+                <img src="../Images/Lemon Poppy Seed Muffins.jpg" alt="Honduras SHG">
+                <div class="catalog-content">
+                    <h3>Lemon Poppy Muffin</h3>
+                    <p>Light, airy muffin packed with fresh zest and crunch.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Fresh lemon flavor with light sweetness and crunchy poppy seeds.</p>
+                    <span class="price">$15.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!--food 12 -->
+            <div class="catalog-box">
+                <img src="../Images/Dark Chocolate Tart.jpg" alt="House Blend">
+                <div class="catalog-content">
+                    <h3>Dark Chocolate Tart</h3>
+                    <p>A decadent tart with a crisp shortcrust and ganache.</p>
+                    <p class="tasting-notes"><strong>Tasting Notes:</strong> Rich dark chocolate flavor with smooth ganache and crisp crust.</p>
+                   
+                    <span class="price">$12.99</span>
+                    <button class="catalog-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-logo">Bean Boutique</h2>
+                <p class="footer-tagline">A Coffee of Excellence</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee_section.html">Our Coffee</a></li>
+                    <li><a href="equipment_section.html">Equipment</a></li>
+                    <li><a href="events_section.html">Events</a></li>
+                    <li><a href="offer_section.html">Offers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> No.29 Dhammayone St, Yangon</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <p><i class="fa-solid fa-business-time"></i> MON-SUN: 8AM-8PM</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe for exclusive offers and coffee updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const pages = document.querySelector('.pages');
+            hamburger?.addEventListener('click', function() {
+                pages?.classList.toggle('open');
+            });
+        });
+    </script>
+
+    
+    
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/05/03/08/20260503081203-EHE3DEUV.js" defer></script>
+    
+    
+</body>    
+
